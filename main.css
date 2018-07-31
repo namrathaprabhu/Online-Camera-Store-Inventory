@@ -1,0 +1,164 @@
+html,body { margin: 0; }
+
+li {
+    list-style: none;
+}
+
+h2 {
+    color: black !important;
+    text-align: center;
+}
+
+.navbar-custom {
+    background-color: black;
+}
+
+.navbar-brand {
+color: white !important;
+
+}
+
+#right {
+color: white !important;
+margin:15px 0 0 1020px;
+
+}
+
+.tabcenter {
+    margin-left: 350px;
+}
+
+.contacthead {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: black;
+}
+
+.button {
+    padding: 7px;
+    border-radius: 2em;
+    border: 1px solid black;
+    width: 100px;
+    margin: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.button1 {
+    padding: 7px;
+    border-radius: 2em;
+    border: 1px solid black;
+    width: 150px;
+    margin: 10px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+}
+
+.button1:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+div#tabs-1 {
+    height: 1000px;
+    background: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+div#tabs-2 {
+    height: 1000px;
+    background: white;
+    border: 1px solid white;    
+    padding: 5px;
+}
+div#tabs-3 {
+    height: 1000px;
+    background: white;
+    border: 1px solid white;    
+    padding: 5px;
+}
+
+.ui-tabs-hide {
+    display: none;
+}
+
+div#tabs {
+    margin: 0 40px 0 40px;
+    height: 1000px;
+    min-width:500px;
+    }
+    
+div#tabs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 22px;
+    /*border-bottom: 1px solid #000;*/
+}
+div#tabs ul li {
+    float: left;
+    height: 40px;
+    padding: 10px 10px 0 10px;
+    margin-right: 50px;
+    
+    border: 1px solid #CCC;
+    border-bottom: none;
+    position: relative;
+    background: black;
+    color: white;
+    border-radius: 2em;
+    width: 180px;
+    text-align: center;
+}
+div#tabs ul li a {
+    text-decoration: none;
+    color: white;
+
+}
+div#tabs ul li.ui-tabs-selected {
+    background: #CCC;
+
+}
+div#tabs ul li.ui-tabs-selected a {
+    color: white;
+}
+
+a {
+    transform-style: none;
+}
+
+#error_form {
+    color: red;
+    text-align: center;
+}
+
+.error {  
+    background-color: #FEE;  
+    }
+
+#status {
+    color: red;
+}
+
+.ml-1 {
+  margin-left: ($spacer-x * .25) !important;
+}
+
+#pic {
+    width: 100px;
+    height: auto;
+
+}
+
+#dstatus {
+    color: red;
+}

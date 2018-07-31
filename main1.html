@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache, no-store, must-revalidate" />
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache" />
+  <META HTTP-EQUIV="Expires" CONTENT="0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="/jquery/jquery.js"></script>
+    <script src="/jquery/jQueryUI.js"></script>
+    
+    <title>Tabs Example</title>
+    <link rel="stylesheet" href="main.css"> 
+    <script type="text/javascript" src="ajax_get_lib.js"></script>
+  
+    <script src="index.js"></script>
+
+</head>
+<body>
+  <nav class=" navbar navbar-custom navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-nav-demo" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://jadran.sdsu.edu/~jadrn030/proj1/index.html" class="navbar-brand"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Best Camera Store </a>
+
+            <ul>
+            <li ><a href="/perl/jadrn030/sessions_cookies/logout.cgi"><p id="right"><span class="glyphicon glyphicon-log-out"></span>Logout</p></a></li>
+            </ul>
+
+        </div>
+
+</div>
+</nav>
+
+<div class="contacthead"> <h1> <br><br> Best Camera Store </br> </h1></div>
+
+
+<hr>
+
+
+    <div id="tabs">
+      
+      <ul>
+        <li class="tabcenter"><a href="#tabs-1"><span>New Record</span></a></li>
+        <li><a href="#tabs-2"><span>Edit Record</span></a></li>
+        <li><a href="#tabs-3"><span>Delete Record</span></a></li>       
+      </ul>
+    <br>
+
+      <br>
+      <div id="tabs-1">
+        <h2>Add New Inventory Record</h2>
+        <br><br>
+
+       <!--  <form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-default">Send invitation</button>
+</form> -->
+<div class="container">
+        <div class="jumbotron">
+
+    <form method="post" enctype="multipart/form-data" id="addform" name="addForm" action="" class="form-inline">
+      <div class="form-group">   
+         <label> SKU:</label>
+
+
+                    <div class="col-lg-4">
+                        <input type="text" name="sku" id="sku" placeholder= "Eg: ABC-123" class="form-control">
+                    </div>
+                    <h4 id="status"></h4>
+                </div>
+                <br>
+                
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Category:
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" name="category" id="category">
+                            <option value="0">Choose Category</option>
+                            <option value="1">DSLR</option>
+                            <option value="2">Point and Shoot</option>
+                            <option value="3">Advanced Amateur</option>
+                            <option value="4">Underwater</option>
+                            <option value="5">Film</option>
+                            <option value="6">Mirrorless</option>
+                            <option value="7">Superzoom</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Vendor:
+                    </div>
+                    <div class="col-lg-4">
+                        <select class="form-control" name="vendor" id="vendor">
+                            <option value="0">Choose Vendor</option>
+                            <option value="1">Nikon</option>
+                            <option value="2">Canon</option>
+                            <option value="3">Olympus</option>
+                            <option value="4">Lumix</option>
+                            <option value="5">Pentax</option>
+                            <option value="6">Leica</option>
+                            <option value="7">Sony</option>
+                                                 
+                            <option value="8">Fuji</option>
+                            
+                        </select>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Manufacturers's Identifier:
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" name="mid" id="mid" placeholder= "Eg: D5" class="form-control">
+                    </div>
+
+                  </div>
+                <br>
+                  
+                <div class="row">
+                    <div class="col-lg-2">
+                        Description :
+                    </div>
+                     <div class="col-lg-4">
+                        <textarea placeholder="Description" rows="4" class="form-control" name="description" id="description"></textarea>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Features :
+                    </div>
+                     <div class="col-lg-4">
+                        <textarea placeholder="Features" rows="5" class="form-control" name="features" id="features"></textarea>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Cost :
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="cost" id="cost">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Retail :
+                    </div>
+                    
+                    <div class="col-lg-4">
+                        <input type="text" class="form-control" name="retail" id="retail">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Quantity :
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="number" class="form-control" name="qty" id="qty" min="1">
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+                        Product Image:
+                    </div>
+                    <div class="col-lg-4">
+                        <input type="file" accept="image/*" class="form-control" name="product_image" id="product_image">
+                    </div>
+                </div>
+                <br>
+                <br>
+
+                <br>
+                <h4><div id="error_form" name="error_form"> </div>&nbsp;</h4>
+                <br>
+                    
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-2">
+
+                    </div>
+                    
+                    <div class="col-lg-2">
+                        <button type="reset" class="button" name="clear" id="clear">Clear</button>
+
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="button" value="Upload File" id="submit_button" />
+                    </div>
+                
+                    <div class="col-lg-1">
+                        <button class="button1" name="addinvent" id="addinvent">Add Inventory</button>
+                    </div>
+                </div>
+                <br>
+
+              </div>
+            </div>
+          </div>
+       
+        <h2 id="status1"></h2>
+<div id="pic"></div>
+        </form>
+
+      </div>
+     
+      <div id="tabs-2">
+        <p>
+          Edit Record goes here.
+        </p>
+      </div>
+      <div id="tabs-3">
+        <p>
+          Delete Record goes here.
+        </p>
+      </div>
+    </div>
+</body>
+</html>

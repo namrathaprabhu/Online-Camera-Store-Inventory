@@ -1,0 +1,59 @@
+.navbar-custom {
+	background-color: black;
+}
+
+#centerpage {
+    max-width: 300px;
+    margin: auto;
+    background: white;
+    padding: 10px;
+
+}
+
+td {
+	padding: 10px;
+	font-size: 17px;
+}
+
+.button {
+	padding: 7px;
+	border-radius: 2em;
+	border: 1px solid black;
+	width: 100px;
+	margin: 10px;
+	margin-top: 10px;
+	background-color: black;
+	color: white;
+}
+
+.button:hover {
+	background-color: white;
+	color: black;
+}
+
+#error {
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+.contacthead {
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+}
+
+.inputbox {
+	margin: 15px;
+}
+
+a {
+	transform-style: none;
+}
+
+.navbar-brand {
+color: white !important;
+
+}
+

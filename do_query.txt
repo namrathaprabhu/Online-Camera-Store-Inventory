@@ -1,0 +1,6 @@
+use jadrn030;
+
+SELECT sku, vendorModel, vendor.name, category.name, quantity, retail
+FROM vendor, category, product
+WHERE vendor.id=product.venID
+AND category.id=product.catID;

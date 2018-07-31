@@ -1,0 +1,72 @@
+use jadrn030;
+
+drop table if exists product;
+drop table if exists vendor;
+drop table if exists category;
+
+create table vendor(
+    id  int NOT NULL AUTO_INCREMENT,
+    name    varchar(20) NOT NULL,
+    primary key(id));
+
+create table category(
+    id  int NOT NULL AUTO_INCREMENT,
+    name    varchar(20) NOT NULL,
+    primary key(id));
+
+create table product (
+    sku     char(7)     NOT NULL,
+    catID   int,
+    venID   int,
+    vendorModel     varchar(50),
+    description     varchar(1024),
+    features        varchar(512),
+    cost            decimal(10,2),
+    retail          decimal(10,2),
+    quantity	    int,
+    image           char(12),
+    primary key(sku),
+    foreign key(catID) references category(id),
+    foreign key(venID) references vendor(id));
+## Insert fixed data
+
+INSERT INTO category (name)  VALUES('DSLR');
+INSERT INTO category (name)  VALUES('Point and Shoot');
+INSERT INTO category (name)  VALUES('Advanced Amateur');
+INSERT INTO category (name)  VALUES('Underwater');
+INSERT INTO category (name)  VALUES('Film');
+INSERT INTO category (name)  VALUES('mirrorless');
+INSERT INTO category (name)  VALUES('superzoom');
+
+INSERT INTO vendor (name)  VALUES('Nikon');	
+INSERT INTO vendor (name)  VALUES('Canon'); 
+INSERT INTO vendor (name)  VALUES('Olympus');
+INSERT INTO vendor (name)  VALUES('Lumix'); 
+INSERT INTO vendor (name)  VALUES('Pentax'); 
+INSERT INTO vendor (name)  VALUES('Leica'); 
+INSERT INTO vendor (name)  VALUES('Sony');
+INSERT INTO vendor (name)  VALUES('Fuji');
+
+INSERT INTO product VALUES('YTP-389','1','1','F2000','40MP camera','Flagship DSLR','3450','8999.95', '5','YTP-389.jpg');
+INSERT INTO product VALUES('YTP-387','3','3','E5000','30MP camera','Flagship DSLR','2000','4999', '2','YTP-387');
+INSERT INTO product VALUES('ATP-459','2','4','GH000','40MP camera','Flagship DSLR','6789','8976', '1','ATP-459');
+INSERT INTO product VALUES('GHP-387','5','7','E5000','30MP camera','Flagship DSLR','2000','4999', '2','GHP-387');
+INSERT INTO product VALUES('TUP-389','1','1','F2000','40MP camera','Flagship DSLR','3450','8999.95', '5','TUP-389');
+INSERT INTO product VALUES('PTQ-387','3','3','E5000','30MP camera','Flagship DSLR','2000','4999', '2','PTQ-387');
+INSERT INTO product VALUES('ATJ-449','2','8','GH000','40MP camera','Flagship DSLR','6789','8976', '1','ATJ-449');
+INSERT INTO product VALUES('GDP-787','5','7','E5000','30MP camera','Flagship DSLR','2000','4999', '2','GDP-787');
+INSERT INTO product VALUES('YUP-389','1','1','F2000','40MP camera','Flagship DSLR','3450','8999.95', '5','YUP-389');
+INSERT INTO product VALUES('ATX-459','2','4','GH000','40MP camera','Flagship DSLR','6789','8976', '1','ATX-459');
+INSERT INTO product VALUES('THP-387','5','7','E5000','30MP camera','Flagship DSLR','2000','4999', '2','THP-387');
+INSERT INTO product VALUES('ZUP-389','1','1','F2000','40MP camera','Flagship DSLR','3450','8999.95', '5','ZUP-389');
+INSERT INTO product VALUES('OTQ-387','3','3','E5000','30MP camera','Flagship DSLR','2000','4999', '2','OTQ-387');
+INSERT INTO product VALUES('FTJ-449','2','8','GH000','40MP camera','Flagship DSLR','6789','8976', '1','FTJ-449');
+INSERT INTO product VALUES('LDP-787','5','7','E5000','30MP camera','Flagship DSLR','2000','4999', '2','LDP-787');
+INSERT INTO product VALUES('OHQ-387','3','3','E5000','30MP camera','Flagship DSLR','2000','4999', '2','OHQ-387');
+INSERT INTO product VALUES('FSO-449','2','8','GH000','40MP camera','Flagship DSLR','6789','8976', '1','FSO-449');
+INSERT INTO product VALUES('LAL-787','5','7','E5000','30MP camera','Flagship DSLR','2000','4999', '2','LAL-787');
+
+
+
+
+
